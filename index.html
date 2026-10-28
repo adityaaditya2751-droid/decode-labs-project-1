@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focus — Simple Task Workspace</title>
+  <meta name="description" content="A minimal, responsive task workspace built with semantic HTML5, CSS Grid/Flexbox, and vanilla JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top" aria-label="Focus home">
+        <span class="logo-mark" aria-hidden="true">◧</span>
+        <span>Focus</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#board">Board</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="nav-cta" href="#board">Get started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <p class="eyebrow">A calmer way to plan the day</p>
+        <h1 id="hero-heading">Fewer tabs.<br>Clearer focus.</h1>
+        <p class="hero-copy">
+          Focus is a lightweight task workspace for people who want a plan
+          for the day without opening five different apps to get it.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#board">Open your board</a>
+          <a class="btn btn-ghost" href="#about">How it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="board" id="board" aria-labelledby="board-heading">
+      <div class="section-inner">
+        <h2 id="board-heading">Today's board</h2>
+        <p class="section-lede">Add a task, mark it done, keep moving.</p>
+
+        <form class="task-form" id="taskForm">
+          <label class="visually-hidden" for="taskInput">New task</label>
+          <input type="text" id="taskInput" name="task" placeholder="e.g. Reply to the client email" required>
+          <button type="submit" class="btn btn-primary">Add task</button>
+        </form>
+
+        <ul class="task-list" id="taskList" aria-live="polite">
+          <li class="task">
+            <label>
+              <input type="checkbox">
+              <span>Sketch the wireframe in grayscale</span>
+            </label>
+          </li>
+          <li class="task">
+            <label>
+              <input type="checkbox">
+              <span>Build the mobile-first CSS Grid layout</span>
+            </label>
+          </li>
+          <li class="task">
+            <label>
+              <input type="checkbox">
+              <span>Check color contrast for accessibility</span>
+            </label>
+          </li>
+        </ul>
+        <p class="task-empty" id="taskEmpty" hidden>Nothing left on the board. Add something above.</p>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <div class="section-inner">
+        <h2 id="features-heading" class="visually-hidden">Why Focus</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Built for any screen</h3>
+            <p>One layout that reflows from a single phone column up to a three-pane desktop view.</p>
+          </article>
+          <article class="feature-card">
+            <h3>No clutter</h3>
+            <p>Three colors, two typefaces, one job per screen. Nothing fights for your attention.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Keyboard friendly</h3>
+            <p>Every control is reachable and visibly focusable without touching a mouse.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="section-inner about-grid">
+        <div>
+          <h2 id="about-heading">Why a plain board works better</h2>
+          <p>
+            Most task apps grow features until the list itself gets buried.
+            Focus stays deliberately small: a single board, a simple add
+            action, and a checkbox. That's usually all a day actually needs.
+          </p>
+        </div>
+        <aside class="stat-card">
+          <p class="stat-number">3</p>
+          <p class="stat-label">things worth doing today, most days</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-brand">Focus</p>
+        <p>A DecodeLabs internship project — responsive frontend, Project 1.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="mailto:decodelabs.tech@gmail.com">decodelabs.tech@gmail.com</a></li>
+          <li><a href="https://www.decodelabs.tech">decodelabs.tech</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
